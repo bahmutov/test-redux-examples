@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Product = ({ price, quantity, title }) => (
-  <div>
+  <div data-cy="product">
     {title} - &#36;{price}{quantity ? ` x ${quantity}` : null}
   </div>
 )
