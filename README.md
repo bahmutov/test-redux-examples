@@ -25,3 +25,17 @@ If you want to try writing Cypress unit tests against the React code, good candi
 - easy unit tests in [src/shopping-cart/reducers](src/shopping-cart/reducers)
 - continue the entire app test in [src/shopping-cart/containers/App.cy-spec.js](src/shopping-cart/containers/App.cy-spec.js)
 - continue testing async Reddit reader in [src/async/containers](src/async/containers) and its individual components
+
+## Mount notes
+
+To run the component tests in new mode, use
+
+- `"cypress-react-unit-test": "3.0.0-cypress-mount-mode.<number>"`
+- run from the root of the repo `cypress-io/cypress` using branch `issue-5922-mountMode`
+
+```
+$ yarn dev --project <path to this folder>
+```
+
+Library versions:
+- `react-redux` v6 does NOT use hooks. v7 uses hooks.
