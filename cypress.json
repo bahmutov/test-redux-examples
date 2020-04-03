@@ -4,6 +4,6 @@
   "supportFile": "node_modules/cypress-react-unit-test/support",
   "integrationFolder": "src",
   "testFiles": "**/*.cy-spec.js",
-  "viewportWidth": 300,
-  "viewportHeight": 300
+  "viewportWidth": 500,
+  "viewportHeight": 600
 }
