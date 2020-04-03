@@ -11,3 +11,5 @@ If you want to try writing Cypress unit tests against the React code, good candi
 - [src/shopping-cart/components/ProductItem.spec.js](src/shopping-cart/components/ProductItem.spec.js)
 - easy unit tests in [src/shopping-cart/reducers](src/shopping-cart/reducers)
 - continue the entire app test in [src/shopping-cart/containers/App.cy-spec.js](src/shopping-cart/containers/App.cy-spec.js)
+
+![Shopping cart App test](images/shopping-cart-app.png)
