@@ -37,5 +37,11 @@ To run the component tests in new mode, use
 $ yarn dev --project <path to this folder>
 ```
 
+Recommended to see debug logs while running Cypress with environment variable
+
+```
+DEBUG=cypress:server:specs,cypress:server:path_helpers
+```
+
 Library versions:
 - `react-redux` v6 does NOT use hooks. v7 uses hooks.

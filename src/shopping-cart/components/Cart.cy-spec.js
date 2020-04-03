@@ -1,13 +1,14 @@
 /// <reference types="cypress" />
 import React from 'react'
 import Cart from './Cart'
+import {mount} from 'cypress-react-unit-test'
 
 const setup = (total, products = []) => {
   const actions = {
     onCheckoutClicked: cy.stub().as('checkout')
   }
 
-  cy.mount(<Cart products={products} total={total} {...actions} />)
+  mount(<Cart products={products} total={total} {...actions} />)
 
   // mini page object?
   return {

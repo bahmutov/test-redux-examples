@@ -6,6 +6,7 @@ import thunk from 'redux-thunk'
 import reducer from '../reducers'
 import { getAllProducts } from '../actions'
 import App from './App'
+import {mount} from 'cypress-react-unit-test'
 
 const middleware = [ thunk ];
 if (process.env.NODE_ENV !== 'production') {
@@ -24,7 +25,7 @@ describe('App', () => {
 
     store.dispatch(getAllProducts())
 
-    cy.mount(
+    mount(
       <Provider store={store}>
         <App />
       </Provider>
