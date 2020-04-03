@@ -1,7 +1,7 @@
 {
-  "name": "try-redux-examples",
+  "name": "redux-counter-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "Testing Redux Counter example using cypress-react-unit-test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
