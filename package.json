@@ -4,7 +4,8 @@
   "description": "Testing Redux Counter example using cypress-react-unit-test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress run",
+    "open": "cypress open",
     "start": "react-scripts start"
   },
   "keywords": [],
