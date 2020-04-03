@@ -23,16 +23,17 @@ describe('Async App', () => {
       applyMiddleware(...middleware)
     )
 
-    // note that once mounting, App starts fetching news right away
-    // so let's spy on "window.fetch" before it
+    // let's pass "fetch" requests the application makes through
+    // our function that would clone the responses so
+    // we can know the data without accessing the Redux store
     cy.stub(window, 'fetch')
       .callsFake((...args) => {
-        console.log('calling the original fetch')
         return window.fetch.wrappedMethod.apply(window, args)
           .then(r => {
-            window.fetch.lastCall.clonedResponse = r.clone()
-            r.clonedResponse = r.clone()
-            return r
+            return r.clone().json().then((json) => {
+              r.jsonResponse = json
+              return r
+            })
           })
       })
       .as('fetch')
@@ -54,23 +55,18 @@ describe('Async App', () => {
     cy.get('li').should('have.length.gt', 10) // DOM has been updated
 
     // returnValue is a promise, so we need to first resolve it
-    // then from the resolved value grab property "clonedResponse"
-    cy.get('@fetch').its('secondCall.returnValue').its('clonedResponse')
-      .invoke('json')
+    // then from the resolved value grab a copy of the JSON response
+    // we create in our original stub function
+    cy.get('@fetch').its('secondCall.returnValue').its('jsonResponse')
+      .then((fetched) => {
+        expect(fetched.kind).to.equal('Listing')
 
-    // cy.get('@fetch').its('secondCall.returnValue.clonedResponse').invoke('json')
-    //   .then(console.log)
-
-    // now let's reach into Redux store, get the fetched news
-    // and make sure they are shown correctly in the list
-    cy.wrap(store).invoke('getState')
-      .then(state => {
-        expect(state.selectedSubreddit).to.equal('frontend')
+        const items = fetched.data.children
+        expect(items).to.have.length.gt(10)
         // all fetched items should be shown
-        cy.get('li').should('have.length', state.postsBySubreddit.frontend.items.length)
+        cy.get('li').should('have.length', items.length)
         // first item from the list should be shown in the GUI
-        cy.get('li').first().should('have.text',
-          state.postsBySubreddit.frontend.items[0].title)
+        cy.get('li').first().should('have.text', items[0].data.title)
       })
   })
 })
