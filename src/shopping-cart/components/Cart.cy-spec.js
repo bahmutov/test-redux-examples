@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 import React from 'react'
 import Cart from './Cart'
-import Product from './Product'
 
 const setup = (total, products = []) => {
   const actions = {

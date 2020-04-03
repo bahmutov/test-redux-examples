@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "cypress": "4.3.0",
-    "cypress-react-unit-test": "3.0.0",
+    "cypress-react-unit-test": "3.0.1",
     "react-scripts": "3.4.1"
   },
   "browserslist": {
