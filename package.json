@@ -18,6 +18,8 @@
     "redux": "^4.0.1"
   },
   "devDependencies": {
+    "cypress": "4.3.0",
+    "cypress-react-unit-test": "2.8.0",
     "react-scripts": "3.4.1"
   },
   "browserslist": {
