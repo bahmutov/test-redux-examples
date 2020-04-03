@@ -5,6 +5,12 @@ Counter examples taken from [redux site](https://redux.js.org/introduction/examp
 
 See [cypress-react-unit-test](https://github.com/bahmutov/cypress-react-unit-test) and [cypress.json](cypress.json)
 
+## Exercises
+
+- clone this repo
+- install dependencies with `npm install`
+- open Cypress: `npm run open` or `npx cypress open`
+
 If you want to try writing Cypress unit tests against the React code, good candidates for rewriting are:
 
 - [src/shopping-cart/components/Product.spec.js](src/shopping-cart/components/Product.spec.js)
