@@ -5,5 +5,6 @@
   "integrationFolder": "src",
   "testFiles": "**/*.cy-spec.js",
   "viewportWidth": 500,
-  "viewportHeight": 600
+  "viewportHeight": 600,
+  "video": false
 }
