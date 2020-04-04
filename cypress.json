@@ -1,7 +1,7 @@
 {
   "fixturesFolder": false,
-  "pluginsFile": "node_modules/cypress-react-unit-test/plugins/cra-v3",
-  "supportFile": "node_modules/cypress-react-unit-test/support",
+  "pluginsFile": "plugins.js",
+  "supportFile": "support.js",
   "integrationFolder": "src",
   "testFiles": "**/*.cy-spec.js",
   "viewportWidth": 500,
