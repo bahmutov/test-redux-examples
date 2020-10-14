@@ -8,7 +8,7 @@
     "test": "cypress-expect run --passing 22 --pending 1",
     "open": "cypress open",
     "start": "react-scripts start",
-    "update:badges": "update-badge cypress cypress-react-unit-test"
+    "update:badges": "update-badge cypress cypress-react-unit-test redux react-redux"
   },
   "keywords": [],
   "author": "",

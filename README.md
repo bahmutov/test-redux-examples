@@ -2,7 +2,7 @@
 
 > These examples taken from [redux site](https://redux.js.org/introduction/examples) and tested using [cypress-react-unit-test](https://github.com/bahmutov/cypress-react-unit-test)
 
-![cypress version](https://img.shields.io/badge/cypress-5.3.0-brightgreen) ![cypress-react-unit-test version](https://img.shields.io/badge/cypress--react--unit--test-3.2.0-brightgreen)
+![cypress version](https://img.shields.io/badge/cypress-5.3.0-brightgreen) ![cypress-react-unit-test version](https://img.shields.io/badge/cypress--react--unit--test-3.2.0-brightgreen) ![redux version](https://img.shields.io/badge/redux-4.0.5-brightgreen) ![react-redux version](https://img.shields.io/badge/react--redux-6.0.1-brightgreen)
 
 - [counter](src/counter) from [codesandbox](https://codesandbox.io/s/github/reduxjs/redux/tree/master/examples/counter)
 - [shopping-cart](src/shopping-cart) from [codesandbox](https://codesandbox.io/s/github/reduxjs/redux/tree/master/examples/shopping-cart)
