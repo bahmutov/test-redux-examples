@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "cypress run",
+    "test": "cypress-expect run --passing 22 --pending 1",
     "open": "cypress open",
     "start": "react-scripts start"
   },
@@ -22,7 +22,7 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "cypress": "4.3.0",
+    "cypress": "5.3.0",
     "cypress-expect": "2.1.2",
     "cypress-react-unit-test": "3.2.0",
     "react-scripts": "3.4.1"
