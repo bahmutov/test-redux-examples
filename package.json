@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Testing Redux Counter example using cypress-react-unit-test",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "cypress run",
     "open": "cypress open",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "cypress": "4.3.0",
+    "cypress-expect": "2.1.2",
     "cypress-react-unit-test": "3.2.0",
     "react-scripts": "3.4.1"
   },
