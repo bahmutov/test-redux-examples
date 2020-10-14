@@ -7,7 +7,8 @@
   "scripts": {
     "test": "cypress-expect run --passing 22 --pending 1",
     "open": "cypress open",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "update:badges": "update-badge cypress cypress-react-unit-test"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "cypress": "5.3.0",
     "cypress-expect": "2.1.2",
     "cypress-react-unit-test": "3.2.0",
+    "dependency-version-badge": "1.4.0",
     "react-scripts": "3.4.1"
   },
   "browserslist": {
