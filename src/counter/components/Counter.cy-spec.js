@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 import React from 'react'
 import Counter from './Counter'
+import {mount} from 'cypress-react-unit-test'
 
 // compare to tests in Counter.test.js
 
@@ -9,7 +10,7 @@ function setup(value = 0) {
     onIncrement: cy.stub().as('increment'),
     onDecrement: cy.stub().as('decrement')
   }
-  cy.mount(<Counter value={value} {...actions} />)
+  mount(<Counter value={value} {...actions} />)
 }
 
 describe('Counter component', () => {

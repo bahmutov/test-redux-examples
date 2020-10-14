@@ -5,6 +5,7 @@ import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
 import reducer from '../reducers'
 import App from './App'
+import {mount} from 'cypress-react-unit-test'
 
 // to correctly initialize the App, just look at what "index.js" is doing
 
@@ -26,7 +27,7 @@ describe('Async App', () => {
     // note that once mounting, App starts fetching news right away
     // so let's spy on "window.fetch" before it
     cy.spy(window, 'fetch').as('fetch')
-    cy.mount(
+    mount(
       <Provider store={store}>
         <App />
       </Provider>
