@@ -1,4 +1,6 @@
-# Redux counter examples taken from [redux site](https://redux.js.org/introduction/examples) and tested using [cypress-react-unit-test](https://github.com/bahmutov/cypress-react-unit-test)
+# Redux counter examples
+
+> These examples taken from [redux site](https://redux.js.org/introduction/examples) and tested using [cypress-react-unit-test](https://github.com/bahmutov/cypress-react-unit-test)
 
 ![cypress version](https://img.shields.io/badge/cypress-5.3.0-brightgreen) ![cypress-react-unit-test version](https://img.shields.io/badge/cypress--react--unit--test-3.2.0-brightgreen)
 
